@@ -32,10 +32,7 @@ class Message(object):
         self.router_ip = str()
 
         if data:
-            if isinstance(data, bytes):
-                self.__parse(data.decode("utf-8"))
-            else:
-                self.__parse(data)
+            self.__parse(data)
         else:
             raise ValueError("Invalid data!", data)
 
